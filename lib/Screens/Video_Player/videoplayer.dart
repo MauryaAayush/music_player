@@ -9,6 +9,7 @@ class VideoplayerScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const Text('Video Player'),
+        leading: Icon(Icons.menu),
       ),
     );
   }
