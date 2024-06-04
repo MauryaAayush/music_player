@@ -8,7 +8,7 @@ class VideoplayerScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Video Player'),
+        title: const Text('Video Player'),
       ),
     );
   }
