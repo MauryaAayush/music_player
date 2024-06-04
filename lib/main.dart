@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'Screens/Music_provider/Music_Provider.dart';
+import 'Screens/Video_Player/videoplayer.dart';
 import 'Screens/home/home_screen.dart';
 
 void main() {
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      home: VideoplayerScreen(),
     );
   }
 }
