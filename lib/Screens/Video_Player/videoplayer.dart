@@ -31,9 +31,6 @@ class _VideoplayerScreenState extends State<VideoplayerScreen> {
 
     chewieController = ChewieController(
       videoPlayerController: playerController,
-      // autoPlay: true,
-      // looping: true,
-      // autoInitialize: true
     );
 
 
