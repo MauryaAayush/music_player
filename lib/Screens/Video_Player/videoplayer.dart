@@ -11,7 +11,7 @@ class VideoplayerScreen extends StatefulWidget {
 
 class _VideoplayerScreenState extends State<VideoplayerScreen> {
   late VideoPlayerController videoPlayerController;
-  late VideoPlayerController _playerController;
+  late VideoPlayerController playerController;
   late ChewieController chewieController;
 
   // to initialize video in controller.
@@ -21,23 +21,21 @@ class _VideoplayerScreenState extends State<VideoplayerScreen> {
       Uri.parse(
           'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
     );
-    videoPlayerController.initialize().then(
-          (value) => setState(() {}),
-        );
+    videoPlayerController.initialize();
 
-    _playerController = VideoPlayerController.networkUrl(
+    playerController = VideoPlayerController.networkUrl(
       Uri.parse(
-          'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'),
+          'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'),
     );
-    _playerController.initialize().then(
-          (value) => setState(() {}),
-        );
+    playerController.initialize();
 
     chewieController = ChewieController(
-      videoPlayerController: _playerController,
-      autoPlay: true,
-      looping: false,
+      videoPlayerController: playerController,
+      // autoPlay: true,
+      // looping: true,
+      // autoInitialize: true
     );
+
 
     super.initState();
   }
@@ -63,7 +61,7 @@ class _VideoplayerScreenState extends State<VideoplayerScreen> {
                 height: 20,
               ),
               AspectRatio(
-                aspectRatio: chewieController.aspectRatio!,
+                aspectRatio: playerController.value.aspectRatio,
                 child: Chewie(controller: chewieController),
               )
             ],

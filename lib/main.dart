@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import 'Screens/Music_provider/Music_Provider.dart';
 import 'Screens/Video_Player/videoplayer.dart';
+import 'Screens/error solving/error_solving.dart';
 
 
 void main() {
