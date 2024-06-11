@@ -20,9 +20,15 @@ class JsonScreen extends StatelessWidget {
           title: Text('json parsing'),
         ),
         body: ListView.builder(
-          itemCount: provider.dataList.length,
+          itemCount: provider.userList.length,
           itemBuilder: (context, index) => ListTile(
-            title: Text(provider.dataList[index]['name']),
+            title: Text(
+              provider.userList[index].name!,
+            ),
+            subtitle: Text(provider.userList[index].address!.geo!.lng!),
+
+
+
           ),
         ),
     );
