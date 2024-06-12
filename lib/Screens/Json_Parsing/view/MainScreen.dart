@@ -25,7 +25,7 @@ class JsonScreen extends StatelessWidget {
             title: Text(
               provider.userList[index].name!,
             ),
-            subtitle: Text(provider.userList[index].address!.geo!.lng!),
+            subtitle: Text(provider.userList[index].address!.geo!.lat!),
 
 
 

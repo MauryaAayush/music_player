@@ -26,22 +26,9 @@ class DataProviderJson extends ChangeNotifier {
     String? json = await rootBundle.loadString('assets/json/user.json');
     dataList = jsonDecode(json);
 
-    userList = dataList
-        .map(
-          (e) => DataModel.fromJson(e),
-    )
-        .toList();
-
-    // fromList();
+    userList = dataList.map((e) => DataModel.fromJson(e),).toList();
 
     print(userList);
     notifyListeners();
   }
-
-  // void fromList() {
-  //   // DataModel.fromJson(dataList[0]);
-  //
-  //
-  //   // notifyListeners();
-  // }
 }
