@@ -39,7 +39,7 @@ class _JsonTestScreenState extends State<JsonTestScreen> {
             provider.postModel!.posts![index].views!.toString(),
           ),
           subtitle: Text(
-            provider.postModel!.posts![index].views!.toString(),
+            provider.postModel!.posts![index].body!.toString(),
           ),
         ),
       ),

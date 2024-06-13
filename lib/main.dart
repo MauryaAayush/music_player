@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'Screens/Audio & Video/combo_file.dart';
+
 import 'Screens/Json_Parsing/Provider/dataprovider.dart';
-import 'Screens/Json_Parsing/view/MainScreen.dart';
+
 import 'Screens/Music_provider/Music_Provider.dart';
 import 'Screens/Testday/Data_test+Provider.dart';
 import 'Screens/Testday/viewScreen.dart';
@@ -25,7 +25,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     // final provider = DataProviderJson();
