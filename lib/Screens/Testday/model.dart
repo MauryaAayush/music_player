@@ -11,7 +11,7 @@ class PostModel {
       total: json['total'],
       skip: json['skip'],
       limit: json['limit'],
-      posts: json['posts'] != null ? (json['posts'] as List).map((e) => Post.fromJson(e)).toList() : null,
+      posts: (json['posts'] as List).map((e) => Post.fromJson(e)).toList(),
     );
   }
 }
