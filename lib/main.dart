@@ -4,6 +4,8 @@ import 'Screens/Audio & Video/combo_file.dart';
 import 'Screens/Json_Parsing/Provider/dataprovider.dart';
 import 'Screens/Json_Parsing/view/MainScreen.dart';
 import 'Screens/Music_provider/Music_Provider.dart';
+import 'Screens/Testday/Data_test+Provider.dart';
+import 'Screens/Testday/viewScreen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,7 +14,8 @@ void main() {
       MultiProvider(
         providers: [
         ChangeNotifierProvider(create: (context) => MusicProvider(),),
-        ChangeNotifierProvider(create: (context) => dataProviderJson,)
+        ChangeNotifierProvider(create: (context) => dataProviderJson,),
+        ChangeNotifierProvider(create: (context) => DataTestProvider(),)
       ],
       child: const MyApp(),)
 
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: JsonScreen(),
+      home: JsonTestScreen(),
       // home: VideoplayerScreen(),
     );
   }
