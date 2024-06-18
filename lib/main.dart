@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Screens/Wallpaper/ApiWallPaper/Provider.dart';
 import 'package:provider/provider.dart';
 
 import 'Screens/HTTP/Main_Screen.dart';
@@ -6,6 +7,7 @@ import 'Screens/Json_Parsing/Provider/dataprovider.dart';
 
 import 'Screens/Music_provider/Music_Provider.dart';
 import 'Screens/Testday/Data_test+Provider.dart';
+import 'Screens/Wallpaper/ApiWallPaper/homeScreen.dart';
 import 'Screens/Wallpaper/Provider/WallPaper_Provider.dart';
 import 'Screens/Wallpaper/wallPaper_Screen.dart';
 
@@ -18,7 +20,8 @@ void main() {
         ChangeNotifierProvider(create: (context) => MusicProvider(),),
         ChangeNotifierProvider(create: (context) => dataProviderJson,),
         ChangeNotifierProvider(create: (context) => DataTestProvider(),),
-        ChangeNotifierProvider(create: (context) => WallpaperProvider(),)
+        ChangeNotifierProvider(create: (context) => WallpaperProvider(),),
+        ChangeNotifierProvider(create: (context) => WallProvider(),)
       ],
       child: const MyApp(),)
 
@@ -36,7 +39,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
 
-      home: WallpaperScreen(),
+      home: ApiWallpaper(),
       // home: JsonTestScreen(),
       // home: VideoplayerScreen(),
     );
