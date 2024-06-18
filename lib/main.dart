@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'Screens/HTTP/Main_Screen.dart';
 import 'Screens/Json_Parsing/Provider/dataprovider.dart';
 
 import 'Screens/Music_provider/Music_Provider.dart';
 import 'Screens/Testday/Data_test+Provider.dart';
 import 'Screens/Testday/viewScreen.dart';
+import 'Screens/Wallpaper/wallPaper_Screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +34,9 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: JsonTestScreen(),
+
+      home: WallpaperScreen(),
+      // home: JsonTestScreen(),
       // home: VideoplayerScreen(),
     );
   }
