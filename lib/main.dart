@@ -6,7 +6,7 @@ import 'Screens/Json_Parsing/Provider/dataprovider.dart';
 
 import 'Screens/Music_provider/Music_Provider.dart';
 import 'Screens/Testday/Data_test+Provider.dart';
-import 'Screens/Testday/viewScreen.dart';
+import 'Screens/Wallpaper/Provider/WallPaper_Provider.dart';
 import 'Screens/Wallpaper/wallPaper_Screen.dart';
 
 void main() {
@@ -17,7 +17,8 @@ void main() {
         providers: [
         ChangeNotifierProvider(create: (context) => MusicProvider(),),
         ChangeNotifierProvider(create: (context) => dataProviderJson,),
-        ChangeNotifierProvider(create: (context) => DataTestProvider(),)
+        ChangeNotifierProvider(create: (context) => DataTestProvider(),),
+        ChangeNotifierProvider(create: (context) => WallpaperProvider(),)
       ],
       child: const MyApp(),)
 
